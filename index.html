@@ -1,5 +1,132 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
-  <body></body>
+  <head>
+    <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <!-- Import pure.css -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+      integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google font -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet">
+     -->
+    <!-- CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+  </head>
+
+  <body>
+    <!--TITLE AND SUBTITLE-->
+    <div id="webpage">
+      <!-- title div -->
+      <div class="pure-g">
+        <div class="pure-u-1-1">
+          <b><h1 id="title">Beyond the Summer Olympics</h1></b>
+          <p id="subtitle">
+            This global sporting event consistently brings people from all over
+            the world together.
+          </p>
+          <p id="subtitle">Let's look at the top countries as of right now.</p>
+        </div>
+      </div>
+
+      <hr />
+      <!-- total modal count (map) div -->
+      <div class="pure-g">
+        <div class="pure-u-1-1">
+          <div id="choropleth_worldmap"></div>
+        </div>
+        <div class="pure-u-1-1">
+          <div class="description">
+            <p id="desc">
+              A CHOROPLETH MAP WILL BE ADDED (under modifications)
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- line chart div -->
+      <div class="pure-g linechart-div">
+        <div class="pure-u-2-3">
+          <div id="linechart"></div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="description description-right">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa
+              sapien faucibus et molestie ac feugiat sed. Egestas purus viverra
+              accumsan in nisl.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h1 id="text">What happened in the recent Tokyo Olympics 2020?</h1>
+      <!-- a look into the recent 2020 summer olympic -->
+      <div class="pure-g">
+        <!-- gold -->
+
+        <div class="pure-u-1-3">
+          <div id="top10gold"></div>
+        </div>
+        <!-- silver-->
+        <div class="pure-u-1-3">
+          <div id="top10silver"></div>
+        </div>
+        <!-- bronze-->
+        <div class="pure-u-1-3">
+          <div id="top10bronze"></div>
+        </div>
+      </div>
+
+      <p>This visualisation is done by Arissha Yasmin Redzuan, 30770726.</p>
+    </div>
+
+    <script type="text/javascript">
+      var choropleth_map = "json/choropleth_map.json";
+      vegaEmbed("#choropleth_worldmap", choropleth_map)
+        .then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        })
+        .catch(console.error);
+
+      var linechart = "json/linechart.json";
+      vegaEmbed("#linechart", linechart)
+        .then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        })
+        .catch(console.error);
+
+      var top10gold = "json/top10gold.json";
+      vegaEmbed("#top10gold", top10gold)
+        .then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        })
+        .catch(console.error);
+
+      var top10silver = "json/top10silver.json";
+      vegaEmbed("#top10silver", top10silver)
+        .then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        })
+        .catch(console.error);
+
+      var top10bronze = "json/top10bronze.json";
+      vegaEmbed("#top10bronze", top10bronze)
+        .then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        })
+        .catch(console.error);
+    </script>
+  </body>
 </html>
