@@ -99,32 +99,32 @@
         </div>
       </div>
       <hr />
-      <p>This visualisation is done by Arissha Yasmin Redzuan, 30770726.</p>
+      <p>This visualisation is done by Arissha Yasmin Redzuan (30770726).</p>
     </div>
 
     <script type="text/javascript">
-      var choropleth_map = "json/choropleth_map.json";
+      var choropleth_map = "js/choropleth_map.json";
       vegaEmbed("#choropleth_worldmap", choropleth_map)
         .then(function (result) {
           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         })
         .catch(console.error);
 
-      var linechart = "json/linechart.json";
+      var linechart = "js/linechart.json";
       vegaEmbed("#linechart", linechart)
         .then(function (result) {
           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         })
         .catch(console.error);
 
-      var top10gold = "json/top10gold.json";
+      var top10gold = "js/top10gold.json";
       vegaEmbed("#top10gold", top10gold)
         .then(function (result) {
           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         })
         .catch(console.error);
 
-      var top10silver = "json/top10silver.json";
+      var top10silver = "js/top10silver.json";
       vegaEmbed("#top10silver", top10silver)
         .then(function (result) {
           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
