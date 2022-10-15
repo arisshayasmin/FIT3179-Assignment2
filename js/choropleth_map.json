@@ -1,11 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "fffffff",
+  "title": "Total Number of Medals Won by Each Country in Summer and Winter Olympics",
   "width": 750,
   "height": 400,
   "projection": { "type": "equalEarth" },
   "data": {
-    "url": "https://raw.githubusercontent.com/JiazhouLiu/FIT3179/main/VegaLite/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
+    "url": "https://raw.githubusercontent.com/arisshayasmin/FIT3179-Assignment2/main/js/ne_110m.json",
     "format": { "type": "topojson", "feature": "ne_110m_admin_0_countries" }
   },
   "transform": [
@@ -16,21 +16,19 @@
           "url": "https://raw.githubusercontent.com/arisshayasmin/FIT3179-Assignment2/main/data/cleaned/olympics_medals_country_wise.csv"
         },
         "key": "Country",
-        "fields": ["Overall"]
+        "fields": ["Number of Medals Won"]
       }
-    },
-    { "calculate": "datum.Overall + 0.1", "as": "Total Medals" }
+    }
   ],
   "mark": { "type": "geoshape" },
   "encoding": {
     "color": {
-      "field": "Total Medals",
-      "type": "quantitative",
-      "scale": { "type": "log" }
+      "field": "Number of Medals Won",
+      "type": "quantitative"
     },
     "tooltip": [
       { "field": "properties.NAME", "type": "nominal", "title": "Country" },
-      { "field": "Overall", "type": "quantitative" }
+      { "field": "Number of Medals Won", "type": "quantitative" }
     ]
   }
 }
