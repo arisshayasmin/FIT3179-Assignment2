@@ -1,5 +1,4 @@
 Country,summer_total_medals,winter_total_medals,Overall
-"""Korea, South""",287,79,366
 Afghanistan,2,0,2
 Albania,0,0,0
 Algeria,17,0,17
@@ -89,6 +88,7 @@ Japan,497,76,573
 Jordan,3,0,3
 Kazakhstan,71,8,79
 Kenya,113,0,113
+"""Korea, South""",287,79,366
 Kosovo,0,0,0
 Kuwait,3,0,3
 Kyrgyzstan,7,0,7
