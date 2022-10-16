@@ -14,6 +14,8 @@
   text-align: center;
   font-size: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 #linechart {
@@ -38,6 +40,11 @@
 }
 
 #desc {
+  /* text-align: center; */
+  /* font-weight: bold; */
+}
+
+#copyright {
   text-align: center;
   font-weight: bold;
 }
