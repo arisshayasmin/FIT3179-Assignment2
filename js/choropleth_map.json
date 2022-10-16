@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Total Number of Medals Won by Each Country in Summer and Winter Olympics",
   "width": 900,
   "height": 400,
   "projection": { "type": "equalEarth" },
