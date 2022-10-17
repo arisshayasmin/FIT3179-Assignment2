@@ -1,31 +1,53 @@
-Year,Host_country,Host_city
-1896,Greece,Athens
-1900,France,Paris
-1904,United States,St. Louis
-1908,Great Britain,London
-1912,Sweden,Stockholm
-1920,Belgium,Antwerp
-1924,France,Paris
-1928,Netherlands,Amsterdam
-1932,United States,Los Angeles
-1936,Germany,Berlin
-1948,Great Britain,London
-1952,Finland,Helsinki
-1956,Australia,Melbourne
-1956,Sweden,Stockholm
-1960,Italy,Rome
-1964,Japan,Tokyo
-1968,Mexico,Mexico City
-1972,West Germany,Munich
-1976,Canada,Montreal
-1980,Soviet Union,Moscow
-1984,United States,Los Angeles
-1988,South Korea,Seoul
-1992,Spain,Barcelona
-1996,United States,Atlanta
-2000,Australia,Sydney
-2004,Greece,Athens
-2008,China,Beijing
-2012,Great Britain,London
-2016,Brazil,Rio de Janeiro
-2020,Japan,Tokyo
+Year,Host_country,Season
+1896,Greece,Summer
+1900,France,Summer
+1904,United States,Summer
+1908,Great Britain,Summer
+1912,Sweden,Summer
+1920,Belgium,Summer
+1924,France,Summer
+1928,Netherlands,Summer
+1932,United States,Summer
+1936,Germany,Summer
+1948,Great Britain,Summer
+1952,Finland,Summer
+1956,Australia,Summer
+1960,Italy,Summer
+1964,Japan,Summer
+1968,Mexico,Summer
+1972,West Germany,Summer
+1976,Canada,Summer
+1980,Soviet Union,Summer
+1984,United States,Summer
+1988,South Korea,Summer
+1992,Spain,Summer
+1996,United States,Summer
+2000,Australia,Summer
+2004,Greece,Summer
+2008,China,Summer
+2012,Great Britain,Summer
+2016,Brazil,Summer
+2020,Japan,Summer
+1924,France,Winter
+1928,Switzerland,Winter
+1932,United States,Winter
+1936,Germany,Winter
+1948,Switzerland,Winter
+1952,Norway,Winter
+1956,Italy,Winter
+1960,United States,Winter
+1964,Austria,Winter
+1968,France,Winter
+1972,Japan,Winter
+1976,Austria,Winter
+1980,United States,Winter
+1984,Yugoslavia,Winter
+1988,Canada,Winter
+1992,France,Winter
+1994,Norway,Winter
+1998,Japan,Winter
+2002,United States,Winter
+2006,Italy,Winter
+2010,Canada,Winter
+2014,Russian Federation,Winter
+2018,Republic of Korea,Winter
