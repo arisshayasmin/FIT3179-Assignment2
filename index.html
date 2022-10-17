@@ -68,7 +68,57 @@
         </div>
       </div>
       <!-- closing of pure-g -->
+      <div class="pure-g outer">
+        <div class="container">
+          <div class="pure-u-1">
+            <h2>
+              Total Number of Medals each Continent's Nations have collectively
+              Won
+            </h2>
+          </div>
 
+          <div class="pure-u-1-2">
+            <!-- piechart -->
+            <div
+              id="piechart"
+              class="container-small"
+              style="padding-left: 30px"
+            ></div>
+          </div>
+          <div class="pure-u-1-2">
+            <div
+              class="description description-right"
+              style="padding-right: 30px"
+            >
+              <p>
+                With an astounding total of
+                <b style="font-size: 15px; color: green">1,1192 medals</b> won
+                to date,
+                <b style="font-size: 15px; color: #00bb80">Europe</b> leads all
+                other continents in the number of medals won.
+              </p>
+
+              <p>
+                Even though the United States consistently leads all other
+                countries in the number of medals won at the Olympics,
+                <b style="font-size: 15px; color: #00958f">North America</b>,
+                <b style="font-size: 15px">with a total of 3965 medals</b>,
+                comes in <b>second place</b> to Europe.
+              </p>
+
+              <p>
+                As for the other continents, we can see that
+                <b style="font-size: 15px; color: #88db5c">Asia</b> is third
+                with a total of 2248 medals in total, and
+                <b style="font-size: 15px; color: #006e80">Oceania</b>,
+                <b style="font-size: 15px; color: #f5f02f">Africa</b> and
+                <b style="font-size: 15px; color: #2f4858">South America</b>
+                comes in fourth, fifth and sixth respectively.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- opening of pure-g || chart 2 div -->
       <div class="pure-g outer">
         <div class="container">
@@ -155,6 +205,14 @@
       // vis 4
       var bronze = "js/bronze_lollipop.json";
       vegaEmbed("#bronze", bronze)
+        .then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        })
+        .catch(console.error);
+
+      // vis 5
+      var piechart = "js/piechart.json";
+      vegaEmbed("#piechart", piechart)
         .then(function (result) {
           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         })

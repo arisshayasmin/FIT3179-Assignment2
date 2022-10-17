@@ -1,0 +1,31 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "height": 300,
+  "width": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/arisshayasmin/FIT3179-Assignment2/main/data/cleaned/medals_by_continent.csv"
+  },
+  "mark": { "type": "arc", "tooltip": true },
+  "encoding": {
+    "color": {
+      "field": "Continent",
+      "type": "nominal",
+      "scale": {
+        "range": [
+          "#F5F02F",
+          "#88DB5C",
+          "#00BB80",
+          "#00958F",
+          "#006E80",
+          "#2F4858"
+        ]
+      }
+    },
+    "theta": {
+      "field": "total_medals",
+      "type": "quantitative",
+      "stack": "normalize",
+      "title": "Total Medals"
+    }
+  }
+}
