@@ -1,0 +1,90 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1000,
+  "height": 700,
+  "data": {
+    "url": "https://raw.githubusercontent.com/arisshayasmin/FIT3179-Assignment2/main/data/cleaned/tokyo_medals_2020.csv"
+  },
+  "transform": [
+    {
+      "filter": "Continent_selection == null || datum.Continent == Continent_selection"
+    },
+    {
+      "filter": "datum.Bronze_Medal > 1"
+    }
+  ],
+  "params": [
+    {
+      "name": "Continent_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "North America",
+          "South America",
+          "Asia",
+          "Europe",
+          "Oceania",
+          "Africa"
+        ],
+        "labels": [
+          "Show All",
+          "North America",
+          "South America",
+          "Asia",
+          "Europe",
+          "Oceania",
+          "Africa"
+        ],
+        "name": "Continent Selection: "
+      }
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "Country",
+      "type": "nominal",
+      "sort": {
+        "op": "sum",
+        "field": "Bronze_Medal",
+        "order": "descending"
+      }
+    },
+    "y": {
+      "field": "Bronze_Medal",
+      "type": "quantitative",
+      "title": "Bronze Medal"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "width": 5,
+        "color": "#CD7F32"
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 500,
+        "stroke": "#7C5449",
+        "color": "#CD7F32",
+        "opacity": 1
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "Country",
+            "type": "nominal"
+          },
+          {
+            "field": "Bronze_Medal",
+            "type": "quantitative",
+            "title": "Total Bronze Medal Won"
+          }
+        ]
+      }
+    }
+  ]
+}

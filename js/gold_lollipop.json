@@ -1,0 +1,90 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1000,
+  "height": 700,
+  "data": {
+    "url": "https://raw.githubusercontent.com/arisshayasmin/FIT3179-Assignment2/main/data/cleaned/tokyo_medals_2020.csv"
+  },
+  "transform": [
+    {
+      "filter": "Continent_selection == null || datum.Continent == Continent_selection"
+    },
+    {
+      "filter": "datum.Gold_Medal > 1"
+    }
+  ],
+  "params": [
+    {
+      "name": "Continent_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "North America",
+          "South America",
+          "Asia",
+          "Europe",
+          "Oceania",
+          "Africa"
+        ],
+        "labels": [
+          "Show All",
+          "North America",
+          "South America",
+          "Asia",
+          "Europe",
+          "Oceania",
+          "Africa"
+        ],
+        "name": "Continent Selection: "
+      }
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "Country",
+      "type": "nominal",
+      "sort": {
+        "op": "sum",
+        "field": "Gold_Medal",
+        "order": "descending"
+      }
+    },
+    "y": {
+      "field": "Gold_Medal",
+      "type": "quantitative",
+      "title": "Gold Medal"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "width": 5,
+        "color": "#E89B25"
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 500,
+        "stroke": "gold",
+        "color": "#E89B25",
+        "opacity": 1
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "Country",
+            "type": "nominal"
+          },
+          {
+            "field": "Gold_Medal",
+            "type": "quantitative",
+            "title": "Total Gold Medal Won"
+          }
+        ]
+      }
+    }
+  ]
+}
