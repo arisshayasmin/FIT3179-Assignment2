@@ -14,119 +14,120 @@
       crossorigin="anonymous"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Google font -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet">
-     -->
     <!-- CSS file -->
     <link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+
+    <title>Olympics Visualisation</title>
   </head>
 
   <body>
-    <!--TITLE AND SUBTITLE-->
-    <div id="webpage">
-      <!-- title div -->
-      <div class="pure-g">
-        <div class="pure-u-1-1">
-          <b><h1 id="title">Beyond the Olympics History</h1></b>
-          <p id="subtitle">
-            The most awaited international sports festival is around the corner,
-            and fans from every corner of the world are as enthusiastic as ever.
-            As of 2022, <b>29 Summer Olympics</b> and
-            <b>22 Winter Olympics</b> had taken place, for a total of
-            <b>51 Olympic events</b> since 1896.
-          </p>
-          <p id="subtitle">Lets delve deeper into the history!</p>
-        </div>
+    <div class="webpage">
+      <!-- title div-->
+      <div id="page-title">
+        <h1 style="color: #cf0909">Beyond the Olympics History</h1>
+        <p style="font-size: 20px">
+          The most awaited international sports festival is around the corner,
+          and fans from every corner of the world are as enthusiastic as ever.
+          As of 2020, <b style="color: #f03613">29 Summer Olympics</b> and
+          <b style="color: #718ebb">22 Winter Olympics</b> had taken place, for
+          a total of <b>51 Olympic events</b> since 1896.
+        </p>
+
+        <p style="font-weight: bold; font-size: 20px">
+          Lets delve deeper into the history!
+        </p>
       </div>
-      <!-- closing of pure-g -->
-      <hr />
 
-      <!-- opening of pure-g -->
-      <div class="pure-g">
-        <!-- chart title -->
-        <div class="pure-u-1">
-          <h2 id="chart-one-title">
-            Total Number of Medals Won by Each Country in Summer and Winter
-            Olympics
-          </h2>
-
-          <!-- chart description -->
-          <p class="desc">
-            With <b id="medals">2959 medals</b> in total (Summer and Winter
-            Olympics combined), the
-            <b id="usa">United States of America</b> remains the leading country
-            <b>worldwide</b> in terms of medal count (1173 of them gold).
-            Moreover, with <b id="medals">12,434 medals</b>,
-            <b id="usa">Europe</b> currently is the leading continent with the
-            highest medal count to date.
-            <b id="usa">North and South America </b>together have earned around
-            4000 medals, placing them as the second-place continent up to this
-            point.
-          </p>
-        </div>
-        <div class="pure-u-2-3">
-          <!-- choropleth map -->
-          <div id="choropleth_worldmap"></div>
-        </div>
-      </div>
-      <!-- closing of pure-g -->
-      <hr />
-      <!-- small data -->
-      <div class="pure-g"></div>
-
-      <!-- line chart div -->
-      <!-- opening pure g -->
-      <div class="pure-g linechart-div">
-        <div class="pure-u-2-3">
-          <div id="linechart"></div>
-        </div>
-        <div class="pure-u-1-3">
-          <div class="description description-right">
+      <!-- opening of pure-g || chart 1 div -->
+      <div class="pure-g outer">
+        <div class="container">
+          <div class="pure-u-1">
+            <h2>
+              Total Number of Medals Won by Each Country in Summer and Winter
+              Olympics
+            </h2>
+            <!-- chart description -->
             <p>
-              (chart type will be change, error in format data + add
-              interactions, under modifications)
+              With <b id="medals">2959 medals</b> in total (Summer and Winter
+              Olympics combined), the
+              <b id="usa">United States of America</b> remains the leading
+              country <b>worldwide</b> in terms of medal count (1173 of them
+              gold). Moreover, with <b id="medals">12,434 medals</b>,
+              <b id="usa">Europe</b> currently is the leading continent with the
+              highest medal count to date.
+              <b id="usa">North and South America </b>together have earned
+              around 4000 medals, placing them as the second-place continent up
+              to this point.
             </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa
-              sapien faucibus et molestie ac feugiat sed. Egestas purus viverra
-              accumsan in nisl.
-            </p>
+          </div>
+
+          <div class="pure-u-1-1">
+            <!-- choropleth map -->
+            <div id="choropleth_worldmap" class="container-small"></div>
           </div>
         </div>
       </div>
-      <!-- closing pure-g -->
-      <hr />
-      <h1 id="text">What happened in the recent Tokyo Olympics 2020?</h1>
-      <!-- a look into the recent 2020 summer olympic -->
-      <div class="pure-g">
-        <!-- gold -->
+      <!-- closing of pure-g -->
 
-        <div class="pure-u-1-3">
-          <div id="top10gold"></div>
-        </div>
-        <!-- silver-->
-        <div class="pure-u-1-3">
-          <div id="top10silver"></div>
-        </div>
-        <!-- bronze-->
-        <div class="pure-u-1-3">
-          <div id="top10bronze"></div>
-        </div>
+      <!-- opening of pure-g || chart 2 div -->
+      <div class="pure-g outer">
+        <div class="container">
+          <div class="pure-u-1">
+            <h2>What Happened in the recent Tokyo Olympics 2020?</h2>
+            <p>
+              After the COVID-19 pandemic and a year of postponement, every
+              nation and team gave it their all for the first Olympic to take
+              place, and they are just as fired up as ever! With the addition of
+              new sports and events, Tokyo 2020 will have the most events in
+              Olympic history, with a total of
+              <b style="font-size: 20px">339 events</b> spread across just
+              <b style="font-size: 20px">33 sports.</b>
+            </p>
+            <p>
+              Check out which countries are successful and who is dominating in
+              terms of total
+              <b style="color: goldenrod; font-size: 20px">gold</b>,
+              <b style="color: rgb(191, 182, 182); font-size: 20px">silver</b>,
+              and <b style="color: brown; font-size: 20px">bronze</b> medals.
+            </p>
+          </div>
 
-        <div class="pure-u-1-1">
-          <p id="desc">DESCRIPTION WILL BE ADDED + add interactions</p>
+          <!-- GOLD -->
+          <div class="pure-u-1">
+            <h3>a) Number of Gold Medals Obtained by Winning Countries</h3>
+          </div>
+
+          <div class="pure-u-1">
+            <div id="gold" class="separate"></div>
+          </div>
+
+          <hr />
+
+          <!-- Silver -->
+          <div class="pure-u-1">
+            <h3>b) Number of Silver Medals Obtained by Winning Countries</h3>
+          </div>
+
+          <div class="pure-u-1">
+            <div id="silver" class="separate"></div>
+          </div>
+
+          <hr />
+
+          <!-- Bronze -->
+          <div class="pure-u-1">
+            <h3>c) Number of Bronze Medals Obtained by Winning Countries</h3>
+          </div>
+
+          <div class="pure-u-1">
+            <div id="bronze"></div>
+          </div>
         </div>
       </div>
-      <hr />
-      <p id="copyright">Copyright © 2022 Arissha Yasmin Redzuan (30770726)</p>
     </div>
-    <!-- closing pure -g -->
 
     <script type="text/javascript">
+      // vis 1
       var choropleth_map = "js/choropleth_map.json";
       vegaEmbed("#choropleth_worldmap", choropleth_map)
         .then(function (result) {
@@ -134,29 +135,25 @@
         })
         .catch(console.error);
 
-      var linechart = "js/linechart.json";
-      vegaEmbed("#linechart", linechart)
+      // vis 2
+      var gold = "js/gold_lollipop.json";
+      vegaEmbed("#gold", gold)
         .then(function (result) {
           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         })
         .catch(console.error);
 
-      var top10gold = "js/top10gold.json";
-      vegaEmbed("#top10gold", top10gold)
+      // vis 3
+      var silver = "js/silver_lollipop.json";
+      vegaEmbed("#silver", silver)
         .then(function (result) {
           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         })
         .catch(console.error);
 
-      var top10silver = "js/top10silver.json";
-      vegaEmbed("#top10silver", top10silver)
-        .then(function (result) {
-          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-        })
-        .catch(console.error);
-
-      var top10bronze = "json/top10bronze.json";
-      vegaEmbed("#top10bronze", top10bronze)
+      // vis 4
+      var bronze = "js/bronze_lollipop.json";
+      vegaEmbed("#bronze", bronze)
         .then(function (result) {
           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         })
